@@ -1,0 +1,3 @@
+리눅스 id/pw: root/모각코
+리눅스 서버 ip: 49.50.172.17
+깃허브 저장소: https://github.com/miroqaan/Streaming

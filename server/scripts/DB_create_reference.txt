@@ -1,0 +1,4 @@
+db.User.insertMany([
+	{Email:"test@test.com", Name:"noname", Phone:"None", Address:"None", Cash:0, 
+	Posts:["video1", "video1"], Videos:[], Following:[]}
+]);

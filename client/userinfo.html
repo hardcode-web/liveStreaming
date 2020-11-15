@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+
+<!-- Head -->
+<head>
+    <title>회원정보</title>
+</head>
+
+
+<!-- Body Section-->
+<body>
+    <div class="">
+        <table style="
+                    border-top-style:double;
+                    border-left-style:double;
+                    border-right-style:double;
+                    border-bottom-style:double;
+                    ">
+            <colgroup>
+                <col span="1" style="width: 20%;">
+                <col span="1" style="width: 80%;">
+            </colgroup>
+
+            <tbody>
+                <tr>
+                    <th>이름</th>
+                    <td id="user_name"></td>
+                </tr>
+
+                <tr>
+                    <th>주소</th>
+                    <td id="user_addr"></td>
+                </tr>
+
+                <tr>
+                    <th>전화번호</th>
+                    <td id="user_phone"></td>
+                </tr>
+
+                <tr>
+                    <th>이메일</th>
+                    <td id="user_email"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+    const RC_USERINFO = 0x41;   // 요청코드: 유저 개인정보
+                                // Todo: 다른 파일로 옮길것
+    const SERVER_ADDR = '49.50.172.17:80';
+
+
+    var user = {
+        name: "",
+        addr: "",
+        phone: "",
+        email: ""
+    };
+
+    function get_token() {
+        // Todo: 쿠키에서 유저 토큰 가져오기
+
+        // Todo: 삭제
+        var DUMMY = 0;
+        return DUMMY;
+    }
+
+    function request_info(user) {
+        var fmt_request = JSON.stringify ({
+            request_code : RC_USERINFO,
+            token : get_token()
+        });
+
+        var ajax_handle = new XMLHttpRequest();
+        ajax_handle.open("GET", SERVER_ADDR);
+        ajax_handle.setRequestHeader('Content-type', 'application/json');
+        ajax_handle.send(fmt_request);
+    }
+
+</script>
