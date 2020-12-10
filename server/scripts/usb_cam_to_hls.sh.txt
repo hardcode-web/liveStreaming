@@ -1,0 +1,1 @@
+ffmpeg -f dshow -r 30 -vcodec h264 -i video="USB Camera" -start_number 0 -hls_time 4 -hls_list_size 0 -f hls output.m3u8

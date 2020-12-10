@@ -1,0 +1,69 @@
+<!doctype html>
+
+<html>
+	<head>
+		<!-- 필요한 CDN -->
+		<link href="https://vjs.zencdn.net/7.10.2/video-js.css" rel="stylesheet" />
+		<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+		<script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	</head>
+
+	<body>
+	
+	
+	
+		<!-- HTML 비디오 태그. 밑의 Javascript 스크립트가 없으면 브라우저쪽 비디오 플에이어가 실행됨 -->
+		
+		<div style="display:inline-block;">
+			<video id="video1" class="video-js" controls width="355" height="288"	data-setup="{}">
+				<source src="http://localhost:8080/videos/user2/video.mp4" type="video/mp4"/>
+				<p class="vjs-no-js">
+				  To view this video please enable JavaScript
+				</p>
+			</video>
+			<p style="text-align:center;">
+				MP4 Video
+			</p>
+		</div>
+		
+		<div style="display:inline-block;">
+			<video id="stream1" class="video-js" controls width="355" height="288"	data-setup="{}" style="display:inline-block;">
+				<source src="http://localhost:8080/streams/user2/stream.m3u8" type="application/x-mpegURL"/>
+				<p class="vjs-no-js">
+				  To view this video please enable JavaScript
+				</p>
+			</video>
+			<p style="text-align:center;">
+				HLS Video
+			</p>
+		</div>
+		
+		<div style="display:inline-block;">
+			<video id="video2" class="video-js" controls width="355" height="288"	data-setup="{}">
+				<source src="http://localhost:8080/videos/user1/video.mp4" type="video/mp4"/>
+				<p class="vjs-no-js">
+				  To view this video please enable JavaScript
+				</p>
+			</video>
+			<p style="text-align:center;">
+				MP4 Video
+			</p>
+		</div>
+		
+		<div style="display:inline-block;">
+			<video id="stream2" class="video-js" controls width="355" height="288"	data-setup="{}" style="display:inline-block;">
+				<source src="http://localhost:8080/streams/user1/stream.m3u8" type="application/x-mpegURL"/>
+				<p class="vjs-no-js">
+				  To view this video please enable JavaScript
+				</p>
+			</video>
+			<p style="text-align:center;">
+				HLS Video
+			</p>
+		</div>
+		
+		
+		<!-- 비디오 플레이어를 Video-js 플레이어로 변환 -->
+		<script src="https://vjs.zencdn.net/7.10.2/video.js"></script>
+	</body>
+</html>

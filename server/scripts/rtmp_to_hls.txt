@@ -1,0 +1,1 @@
+ffmpeg -f dshow -r 30 -vcodec h264 -i video="USB Camera" -f flv rtmp://localhost:80/live/test
